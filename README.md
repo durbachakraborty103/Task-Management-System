@@ -99,3 +99,6 @@ I have read the Laravel documentation in three areas of focus:
 3. Optimization – Discussed Laravel's optimization methods, including caching settings, events, routes, and views, that increase application performance and efficiency. 
 
 The above understanding will help in enhancing Laravel deployment practices and optimizing applications for production.
+
+*(5pm-6pm):
+I studied the authentication process in Laravel. I prepared a rough plan on how to implement it, covering key steps like user registration/login, password hashing, session management, and middleware protection.
