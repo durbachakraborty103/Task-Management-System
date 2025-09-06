@@ -59,8 +59,20 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+
+
+
+
+
+
+                                                                            TASK MANAGEMENT PROJECT REPORT(DAILY)
+
+
+
 FIRST WEEK:
-           Weekly Project Report: Task Management System
+           Weekly Project Report: 
 
 This week, I developed core files for our Laravel Task Manager:
 
@@ -70,5 +82,19 @@ This week, I developed core files for our Laravel Task Manager:
 · create_tasks_table.php (Migration) - Created database schema with title and completed fields
 · index.blade.php - Displays tasks list (frontend view)
 
-SATURDAY 06.09.25(10am-11am): I have read the introduction section of the Laravel documentation.
+SATURDAY 06.09.25:-
 
+*(10am-11am): I have read the introduction section of the Laravel documentation.
+*(2pm-3pm):
+Laravel Documentation Reading Report
+
+I have read the Laravel documentation in three areas of focus:
+
+1. Server Requirements – Read about the requirements to host a Laravel application, such as supported PHP versions, needed extensions, and supported server environments.
+
+2. Server Configuration – Understood configuring various servers like Nginx and FrankenPHP, and setting proper directory permissions to deploy securely and easily.
+
+
+3. Optimization – Discussed Laravel's optimization methods, including caching settings, events, routes, and views, that increase application performance and efficiency. 
+
+The above understanding will help in enhancing Laravel deployment practices and optimizing applications for production.
