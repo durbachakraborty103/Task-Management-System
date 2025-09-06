@@ -85,6 +85,7 @@ This week, I developed core files for our Laravel Task Manager:
 SATURDAY 06.09.25:-
 
 *(10am-11am): I have read the introduction section of the Laravel documentation.
+
 *(2pm-3pm):
 Laravel Documentation Reading Report
 
