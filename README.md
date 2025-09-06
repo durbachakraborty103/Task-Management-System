@@ -82,7 +82,7 @@ This week, I developed core files for our Laravel Task Manager:
 · create_tasks_table.php (Migration) - Created database schema with title and completed fields
 · index.blade.php - Displays tasks list (frontend view)
 
-SATURDAY 06.09.25:-
+SATURDAY (06.09.25):-
 
 *(10am-11am): I have read the introduction section of the Laravel documentation.
 
