@@ -59,3 +59,16 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+FIRST WEEK:
+           Weekly Project Report: Task Management System
+
+This week, I developed core files for our Laravel Task Manager:
+
+· TaskController.php - Handles CRUD operations with validation
+· web.php - Defines RESTful routes (GET/POST/PUT/DELETE)
+· Task.php (Model) - Manages database interactions via Eloquent ORM
+· create_tasks_table.php (Migration) - Created database schema with title and completed fields
+· index.blade.php - Displays tasks list (frontend view)
+
+SATURDAY 06.09.25(10am-11am): I have read the introduction section of the Laravel documentation.
+
