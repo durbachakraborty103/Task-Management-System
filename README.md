@@ -60,45 +60,33 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
+                                  TASK MANAGEMENT PROJECT REPORT
 
 
-
-
-
-
-
-                                                                            TASK MANAGEMENT PROJECT REPORT(DAILY)
-
-
-
-FIRST WEEK:
-           Weekly Project Report: 
+FIRST WEEK: Weekly Project Report:
 
 This week, I developed core files for our Laravel Task Manager:
 
-· TaskController.php - Handles CRUD operations with validation
-· web.php - Defines RESTful routes (GET/POST/PUT/DELETE)
-· Task.php (Model) - Manages database interactions via Eloquent ORM
-· create_tasks_table.php (Migration) - Created database schema with title and completed fields
-· index.blade.php - Displays tasks list (frontend view)
+· TaskController.php - Handles CRUD operations with validation · web.php - Defines RESTful routes (GET/POST/PUT/DELETE) · Task.php (Model) - Manages database interactions via Eloquent ORM · create_tasks_table.php (Migration) - Created database schema with title and completed fields · index.blade.php - Displays tasks list (frontend view)
 
 SATURDAY (06.09.25):-
 
 *(10am-11am): I have read the introduction section of the Laravel documentation.
 
-*(2pm-3pm):
-Laravel Documentation Reading Report
+*(2pm-3pm): Laravel Documentation Reading Report
 
 I have read the Laravel documentation in three areas of focus:
 
-1. Server Requirements – Read about the requirements to host a Laravel application, such as supported PHP versions, needed extensions, and supported server environments.
+Server Requirements – Read about the requirements to host a Laravel application, such as supported PHP versions, needed extensions, and supported server environments.
 
-2. Server Configuration – Understood configuring various servers like Nginx and FrankenPHP, and setting proper directory permissions to deploy securely and easily.
+Server Configuration – Understood configuring various servers like Nginx and FrankenPHP, and setting proper directory permissions to deploy securely and easily.
 
-
-3. Optimization – Discussed Laravel's optimization methods, including caching settings, events, routes, and views, that increase application performance and efficiency. 
+Optimization – Discussed Laravel's optimization methods, including caching settings, events, routes, and views, that increase application performance and efficiency.
 
 The above understanding will help in enhancing Laravel deployment practices and optimizing applications for production.
 
-*(5pm-6pm):
-I studied the authentication process in Laravel. I prepared a rough plan on how to implement it, covering key steps like user registration/login, password hashing, session management, and middleware protection.
+*(5pm-6pm): I studied the authentication process in Laravel. I prepared a rough plan on how to implement it, covering key steps like user registration/login, password hashing, session management, and middleware protection.
+
+MONDAY (08.09.25):- 
+
+*(10am-11am):I made a plan to setup & and make changes in database.
