@@ -102,3 +102,7 @@ The above understanding will help in enhancing Laravel deployment practices and 
 
 *(5pm-6pm):
 I studied the authentication process in Laravel. I prepared a rough plan on how to implement it, covering key steps like user registration/login, password hashing, session management, and middleware protection.
+
+MONDAY (08.09.25):- 
+
+*(10am-11am):I made a plan to setup & and make changes in database.
