@@ -94,3 +94,4 @@ MONDAY (08.09.25):-
 *(2pm-3pm):Completed database migration to establish user-task relationships. Successfully tested the model association, confirming users can now own and manage private task lists.
 
 Fixed critical authentication class errors and implemented secure ownership linking between users and their tasks.
+*(5pm-6pm):Tried hard to resolve the Tinker issue to add user_id, but there is still the error.
