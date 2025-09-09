@@ -24,9 +24,11 @@ class TaskController extends Controller
             'title' => 'required|string|max:255',
 
         ]);
-
+         //$user = auth()->user();
         Task::create([
-            'title' => $validated['title'], //$request->input('name'),
+            'title' => $validated['title'],
+            'user_id' => auth()->user()->id(),
+            // $request->input('name'),
             'completed' => false,
         ]);
 
@@ -37,7 +39,7 @@ class TaskController extends Controller
     public function update(Task $task): RedirectResponse
     {
         $task->update(['completed' => true]);
-        return redirect()->back();
+        return redirect()->back()->with('success','Task created successfully');
     }
 
     // Delete a task
