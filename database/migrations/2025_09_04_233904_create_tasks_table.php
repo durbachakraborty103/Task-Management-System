@@ -14,8 +14,11 @@ return new class extends Migration
         Schema::create('tasks', function (Blueprint $table) {
             $table->id();
              $table->string('title');
-        $table->boolean('completed')->default(false);
-            $table->timestamps();
+        $table->foreignId('user_id')->constrained()->onDelete('cascade'); 
+         $table->boolean('completed')->default(false);// Add this line
+        $table->timestamps();
+    
+
         });
     }
 
