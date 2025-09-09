@@ -93,9 +93,7 @@ MONDAY (08.09.25):-
 
 *(2pm-3pm):Completed database migration to establish user-task relationships. Successfully tested the model association, confirming users can now own and manage private task lists.
 
-Fixed critical authentication class errors and implemented secure ownership linking between users and their tasks.
-<<<<<<< HEAD
-=======
-
 *(5pm-6pm):Tried hard to resolve the Tinker issue to add user_id, but there is still the error.
->>>>>>> 2fae42a2394f8e49528843c4e89646fbad4f949c
+
+
+TUESDAY (09.09.25):-Focused on the TaskController store method. Debugged initial syntax errors. Still working to resolve the "undefined method 'id'" error for user authentication. Researching the correct approach to link tasks to users. Will continue troubleshooting this specific issue in the next session.
