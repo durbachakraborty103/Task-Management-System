@@ -94,3 +94,6 @@ MONDAY (08.09.25):-
 *(2pm-3pm):Completed database migration to establish user-task relationships. Successfully tested the model association, confirming users can now own and manage private task lists.
 
 Fixed critical authentication class errors and implemented secure ownership linking between users and their tasks.
+
+*(5pm-6pm):
+Focused on Laravel's Authorization system. Learned to use Policies for clean, scalable user permissions. Studied how to organize model-specific rules (like update/delete tasks) securely. Understood the official method to replace manual checks with structured authorization, ensuring robust security and maintainable code. Ready to implement professional-grade access control.
