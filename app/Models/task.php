@@ -19,7 +19,7 @@ class Task extends Model
         'title',
         'description',
         'completed',
-        'user_id', 
+        'id', 
     ];
 
     /**
@@ -27,6 +27,6 @@ class Task extends Model
      */
     public function user()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class,'id');
     }
 }

@@ -5,47 +5,47 @@ namespace App\Http\Controllers;
 use App\Models\Task;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
 
 class TaskController extends Controller
 {
-    // Show all tasks
     public function index(): View
     {
-        $tasks = Task::all();
+        $tasks = Task::where('user_id', Auth::id())->get();
         return view('tasks.index', compact('tasks'));
     }
 
-    // Store a new task
     public function store(Request $request): RedirectResponse
     {
-        // dd($request->all()); 
-        $validated = $request->validate([
-            'title' => 'required|string|max:255',
+        $request->validate(['title' => 'required|string|max:255']);
 
-        ]);
-         //$user = auth()->user();
         Task::create([
-            'title' => $validated['title'],
-            'user_id' => auth()->user()->id(),
-            // $request->input('name'),
+            'title' => $request->title,
+            'user_id' => Auth::id(),
             'completed' => false,
         ]);
 
-        return redirect()->back()->with('success', 'Task created successfully');
+        return back()->with('success', 'Task created successfully.');
     }
 
-    // Mark a task as completed
-    public function update(Task $task): RedirectResponse
+    public function update(Request $request, Task $task): RedirectResponse
     {
-        $task->update(['completed' => true]);
-        return redirect()->back()->with('success','Task created successfully');
+        if ($task->user_id !== Auth::id()) {
+            abort(403);
+        }
+
+        $task->update(['completed' => !$task->completed]);
+        return back()->with('success', 'Task updated.');
     }
 
-    // Delete a task
     public function destroy(Task $task): RedirectResponse
     {
+        if ($task->user_id !== Auth::id()) {
+            abort(403);
+        }
+
         $task->delete();
-        return redirect()->back();
+        return back()->with('success', 'Task deleted.');
     }
 }

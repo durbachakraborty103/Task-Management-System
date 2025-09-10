@@ -17,7 +17,11 @@ class User extends Authenticatable
     // ... the rest of your code ...
 
     // ... other existing properties and methods ...
-
+protected $fillable = [
+    'name',
+    'email',
+    'password',
+    ];
     /**
      * The attributes that should be hidden for serialization.
      *
@@ -47,6 +51,6 @@ class User extends Authenticatable
      */
     public function tasks(): HasMany
     {
-        return $this->hasMany(Task::class);
+        return $this->hasMany(Task::class,'id');
     }
 } // This is the end of the class - add the method before this line
