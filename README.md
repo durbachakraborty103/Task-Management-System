@@ -97,3 +97,6 @@ MONDAY (08.09.25):-
 
 
 TUESDAY (09.09.25):-Focused on the TaskController store method. Debugged initial syntax errors. Still working to resolve the "undefined method 'id'" error for user authentication. Researching the correct approach to link tasks to users. Will continue troubleshooting this specific issue in the next session.
+
+WEDNESDAY (10.09.25):
+*(10am-11am): Studied the error handling section from the Laravel documentation. Went through how exceptions are handled and the use of logging and reporting methods for debugging.
