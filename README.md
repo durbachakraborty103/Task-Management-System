@@ -108,6 +108,6 @@ Today I studied the error handling section from the Laravel documentation. I wen
 *(5pm-6pm):
 Focused on Laravel's Authorization system. Learned to use Policies for clean, scalable user permissions. Studied how to organize model-specific rules (like update/delete tasks) securely. Understood the official method to replace manual checks with structured authorization, ensuring robust security and maintainable code. Ready to implement professional-grade access control.
 
-WEDNESDAY (11.09.25):
+THURSDAY (11.09.25):
 *(10am-11am):
 Foundational setup (auth, migrations, models) is complete. Today's focus is implementing business logic: defining specific permissions and roles, writing Policy methods (e.g., update() for posts), and applying authorization checks in controllers and Blade views to enforce user access rules.
