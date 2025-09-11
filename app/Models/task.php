@@ -19,7 +19,7 @@ class Task extends Model
         'title',
         'description',
         'completed',
-        'id', 
+        'user_id', 
     ];
 
     /**
