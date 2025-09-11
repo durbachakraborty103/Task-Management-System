@@ -12,7 +12,7 @@ class TaskController extends Controller
 {
     public function index(): View
     {
-        $tasks = Task::where('user_id', Auth::id())->get();
+        $tasks =Task::where('user_id', Auth::id())->latest()->get();
         return view('tasks.index', compact('tasks'));
     }
 
