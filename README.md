@@ -93,7 +93,17 @@ MONDAY (08.09.25):-
 
 *(2pm-3pm):Completed database migration to establish user-task relationships. Successfully tested the model association, confirming users can now own and manage private task lists.
 
-Fixed critical authentication class errors and implemented secure ownership linking between users and their tasks.
+*(5pm-6pm):Fixed critical authentication class errors and implemented secure ownership linking between users and their tasks.
+
+TUESDAY (09.09.25):
+DAILY REPORT:
+Focused on the TaskController store method. Debugged initial syntax errors. Still working to resolve the "undefined method 'id'" error for user authentication. Researching the correct approach to link tasks to users. Will continue troubleshooting this specific issue in the next session.
+
+WEDNESDAY (10.09.25):
+*(10am-11am):
+Today I studied the error handling section from the Laravel documentation. I went through how exceptions are handled, the role of the App\Exceptions\Handler class, and the use of logging and reporting methods for debugging.
+
+*(2pm-3pm):Installed Laravel Breeze authentication system. Fixed mass assignment error by adding $fillable to User model. Tested successful user registration, login, and logout flows. Verified database structure with user_id foreign key in place. All authentication scaffolding is now functional. Ready for tomorrow's task: securing TaskController to implement user-specific authorization and data isolation.
 
 *(5pm-6pm):
 Focused on Laravel's Authorization system. Learned to use Policies for clean, scalable user permissions. Studied how to organize model-specific rules (like update/delete tasks) securely. Understood the official method to replace manual checks with structured authorization, ensuring robust security and maintainable code. Ready to implement professional-grade access control.
