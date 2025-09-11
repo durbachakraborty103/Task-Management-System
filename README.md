@@ -111,3 +111,4 @@ Focused on Laravel's Authorization system. Learned to use Policies for clean, sc
 THURSDAY (11.09.25):
 *(10am-11am):
 Foundational setup (auth, migrations, models) is complete. Today's focus is implementing business logic: defining specific permissions and roles, writing Policy methods (e.g., update() for posts), and applying authorization checks in controllers and Blade views to enforce user access rules.
+*(2pm-3pm):Modified index(), edit(), update(), destroy() methods for user-specific access. Added Auth checks. Currently stuck on store() method syntax error - user_id not being set automatically. Troubleshooting relationship-based task creation vs. direct Task::create(). Authorization partially working but task creation blocked. Need to resolve Auth::user()->tasks()->create() implementation.
