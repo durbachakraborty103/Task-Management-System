@@ -56,3 +56,12 @@ Foundational setup (auth, migrations, models) is complete. Today's focus is impl
 *(2pm-3pm):Modified index(), edit(), update(), destroy() methods for user-specific access. Added Auth checks. Currently stuck on store() method syntax error - user_id not being set automatically. Troubleshooting relationship-based task creation vs. direct Task::create(). Authorization partially working but task creation blocked. Need to resolve Auth::user()->tasks()->create() implementation.
 
 *(5pm-6pm):Resolved critical authorization issues that blocked task creation. Fixed missing field configuration in the task model that caused database errors. Verified users can now only access and manage their own tasks, with proper security preventing unauthorized access. Completed authentication and authorization objectives successfully. The system now ensures full data isolation between users.
+
+MONDAY (15.09.25): Studied HTML, CSS and JavaScript and learned its core functionality in details. Prepared a UI design to implement its appliances related to Task Management Portal full stack project.
+
+TUESDAY (16.09.25): Made a frontend design with html'css'javascript of task management.
+
+WEDNESDAY(17.09.25): 
+
+*(10am-11am):Today I finalized the implementation plan for advanced task filtering features, including database schema updates, backend model enhancements, and UI component designs. The development phase is now ready to begin, keeping our project perfectly aligned with the Week 3 roadmap schedule. All foundational planning is complete.
+
