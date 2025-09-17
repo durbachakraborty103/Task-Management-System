@@ -45,7 +45,6 @@ protected $fillable = [
         ];
     }
 
-    // ---> ADD THE NEW METHOD HERE <--- 
     /**
      * Get the tasks for the user.
      */
