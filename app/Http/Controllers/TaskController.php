@@ -111,6 +111,21 @@ class TaskController extends Controller
     }
 
     /**
+     * Mark the specified task as completed.
+     */
+    public function complete(Task $task): RedirectResponse
+    {
+        if ($task->user_id !== Auth::id()) {
+            abort(403, 'Unauthorized action.');
+        }
+
+        $task->update(['completed' => true]);
+        
+        return redirect()->route('tasks.index')
+            ->with('success', 'Task marked as completed!');
+    }
+
+    /**
      * Remove the specified resource from storage.
      */
     public function destroy(Task $task): RedirectResponse

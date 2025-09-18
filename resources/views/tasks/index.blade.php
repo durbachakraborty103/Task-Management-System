@@ -62,15 +62,21 @@
                                             <!-- Edit Button -->
                                             <a href="{{ route('tasks.edit', $task->id) }}" class="btn btn-sm btn-outline-primary">Edit</a>
                                             
-                                            <!-- Complete/Incomplete Button -->
-                                            <form action="{{ route('tasks.update', $task->id) }}" method="POST" class="d-inline">
-                                                @csrf
-                                                @method('PUT')
-                                                <input type="hidden" name="completed" value="{{ $task->completed ? 0 : 1 }}">
-                                                <button type="submit" class="btn btn-sm btn-{{ $task->completed ? 'warning' : 'success' }}">
-                                                    {{ $task->completed ? 'Mark Incomplete' : 'Complete' }}
-                                                </button>
-                                            </form>
+                                            <!-- Complete Button -->
+                                            @if(!$task->completed)
+                                                <form action="{{ route('tasks.complete', $task->id) }}" method="POST" class="d-inline">
+                                                    @csrf
+                                                    <button type="submit" class="btn btn-sm btn-success">Complete</button>
+                                                </form>
+                                            @else
+                                                <!-- Mark Incomplete Button -->
+                                                <form action="{{ route('tasks.update', $task->id) }}" method="POST" class="d-inline">
+                                                    @csrf
+                                                    @method('PUT')
+                                                    <input type="hidden" name="completed" value="0">
+                                                    <button type="submit" class="btn btn-sm btn-warning">Mark Incomplete</button>
+                                                </form>
+                                            @endif
                                             
                                             <!-- Delete Button -->
                                             <form action="{{ route('tasks.destroy', $task->id) }}" method="POST" class="d-inline">

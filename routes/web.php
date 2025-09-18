@@ -19,6 +19,7 @@ Route::middleware('auth')->group(function () {
     
     // ADD THIS LINE - Resource route for tasks
     Route::resource('tasks', TaskController::class);
+    Route::post('/tasks/{task}/complete', [TaskController::class, 'complete'])->name('tasks.complete');
 });
 
 require __DIR__ .'/auth.php';
