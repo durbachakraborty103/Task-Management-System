@@ -42,11 +42,10 @@ WEDNESDAY (10.09.25):
 
 *(10am-11am): Studied the error handling section from the Laravel documentation. Went through how exceptions are handled and the use of logging and reporting methods for debugging.
 
-<<<<<<< HEAD
+
 *(2pm-3pm):
 Installed Laravel Breeze authentication system. Fixed mass assignment error by adding $fillable to User model. Tested successful user registration, login, and logout flows. Verified database structure with user_id foreign key in place. All authentication scaffolding is now functional. Ready for tomorrow's task: securing TaskController to implement user-specific authorization and data isolation.
 
-=======
 *(5pm-6pm):
 Focused on Laravel's Authorization system. Learned to use Policies for clean, scalable user permissions. Studied how to organize model-specific rules (like update/delete tasks) securely. Understood the official method to replace manual checks with structured authorization, ensuring robust security and maintainable code. Ready to implement professional-grade access control.
 
