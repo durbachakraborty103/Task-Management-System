@@ -45,7 +45,7 @@ WEDNESDAY (10.09.25):
 <<<<<<< HEAD
 *(2pm-3pm):
 Installed Laravel Breeze authentication system. Fixed mass assignment error by adding $fillable to User model. Tested successful user registration, login, and logout flows. Verified database structure with user_id foreign key in place. All authentication scaffolding is now functional. Ready for tomorrow's task: securing TaskController to implement user-specific authorization and data isolation.
->>>>>>> e807593f65ebfddf9bc3dcc60c0ce02df6f2a6b4
+
 =======
 *(5pm-6pm):
 Focused on Laravel's Authorization system. Learned to use Policies for clean, scalable user permissions. Studied how to organize model-specific rules (like update/delete tasks) securely. Understood the official method to replace manual checks with structured authorization, ensuring robust security and maintainable code. Ready to implement professional-grade access control.
@@ -67,4 +67,4 @@ WEDNESDAY(17.09.25):
 
 *(10am-11am):Today I finalized the implementation plan for advanced task filtering features, including database schema updates, backend model enhancements, and UI component designs. The development phase is now ready to begin, keeping our project perfectly aligned with the Week 3 roadmap schedule. All foundational planning is complete.
 
->>>>>>> 1b4faa89b9c4d121c4beb7d968fe866fa0f086e7
+07.10.25(TUESDAY):Today I researched how to implement an email notification system for my website. I learned about different types of notification emails, best practices for delivery and spam protection, and compared providers like Mailgun, SendGrid, and Amazon SES. I also created a detailed plan covering setup, backend integration, monitoring, and deployment. Next, I’ll design templates and integrate the chosen email service with the website backend.
