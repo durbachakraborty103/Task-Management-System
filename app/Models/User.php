@@ -2,54 +2,69 @@
 
 namespace App\Models;
 
-// These THREE use statements are REQUIRED
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
+// -----------------------------------------------------------
+// Import necessary Laravel classes
+// -----------------------------------------------------------
+use Illuminate\Database\Eloquent\Factories\HasFactory; // For creating test data with factories
+use Illuminate\Foundation\Auth\User as Authenticatable; // Extends authentication features (login, register)
+use Illuminate\Notifications\Notifiable;              // Adds notification support (emails, database alerts)
+use Illuminate\Database\Eloquent\Relations\HasMany;   // For defining "has many" relationships
 
-// Then you can add your custom relationships
-use Illuminate\Database\Eloquent\Relations\HasMany;
-
+// -----------------------------------------------------------
+// User Model - Represents a single user in the application
+// -----------------------------------------------------------
 class User extends Authenticatable
 {
+    // -------------------------------------------------------
+    // Use traits:
+    // - HasFactory: allows factory-based test data creation
+    // - Notifiable: allows sending notifications to user
+    // -------------------------------------------------------
     use HasFactory, Notifiable;
     
-    // ... the rest of your code ...
-
-    // ... other existing properties and methods ...
-protected $fillable = [
-    'name',
-    'email',
-    'password',
+    // -------------------------------------------------------
+    // 1. $fillable - Mass-assignable attributes
+    // Protects against mass assignment vulnerabilities by
+    // allowing only these fields to be bulk-inserted/updated.
+    // -------------------------------------------------------
+    protected $fillable = [
+        'name',      // User's full name
+        'email',     // User's email address
+        'password',  // User's password (will be hashed automatically)
     ];
-    /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var array<int, string>
-     */
+
+    // -------------------------------------------------------
+    // 2. $hidden - Hide sensitive fields in arrays/JSON
+    // This ensures password and remember_token do not appear
+    // in API responses or when converting model to array.
+    // -------------------------------------------------------
     protected $hidden = [
         'password',
         'remember_token',
     ];
 
-    /**
-     * Get the attributes that should be cast.
-     *
-     * @return array<string, string>
-     */
+    // -------------------------------------------------------
+    // 3. casts() - Automatically convert attributes
+    // - email_verified_at -> converted to Carbon datetime
+    // - password -> automatically hashed when saved
+    // -------------------------------------------------------
     protected function casts(): array
     {
         return [
-            'email_verified_at' => 'datetime',
-            'password' => 'hashed',
+            'email_verified_at' => 'datetime', // lets you use ->diffForHumans()
+            'password' => 'hashed',           // automatically bcrypts password
         ];
     }
 
-    /**
-     * Get the tasks for the user.
-     */
+    // -------------------------------------------------------
+    // 4. Relationship: User HAS MANY tasks
+    // This allows fetching all tasks for a user with:
+    // $user->tasks
+    //
+    // FIXED: Changed foreign key from 'id' to 'user_id'
+    // -------------------------------------------------------
     public function tasks(): HasMany
     {
-        return $this->hasMany(Task::class,'id');
+        return $this->hasMany(Task::class, 'user_id');
     }
-} // This is the end of the class - add the method before this line
+}
