@@ -12,29 +12,24 @@ class TaskDueSoonNotification extends Notification implements ShouldQueue
 {
     use Queueable;
 
-    // Store the task instance
     public function __construct(public Task $task)
     {
-        // Constructor receives the task and makes it available to the notification
     }
 
-    // Define which channels to send the notification through
     public function via(object $notifiable): array
     {
-        return ['mail']; // Send via email only
+        return ['mail'];
     }
 
-    // Define the email content for due soon reminder
     public function toMail(object $notifiable): MailMessage
     {
         return (new MailMessage)
-            ->subject('Reminder: Task Due Soon - ' . $this->task->title)
-            ->greeting('Hello ' . $notifiable->name . '!')
-            ->line('This is a reminder that your task is due soon.')
-            ->line('Task: ' . $this->task->title)
-            ->line('Due Date: ' . $this->task->due_date->format('M j, Y'))
-            ->line('Priority: ' . ucfirst($this->task->priority))
-            ->action('View Task', url('/tasks/' . $this->task->id))
-            ->line('Please complete it before the deadline.');
+            ->subject('Task Due Notification')
+            ->greeting('Dear ' . $notifiable->name . ',')
+            ->line('We would like to inform you that one of your assigned tasks has reached its due date.')
+            ->line('Your timely completion of this task would be greatly appreciated.')
+            ->action('Access Task', url('/tasks/' . $this->task->id))
+            ->line('Please let us know if you need any assistance or if there are any constraints.')
+            ->salutation('Sincerely, Your Task Management System');
     }
 }

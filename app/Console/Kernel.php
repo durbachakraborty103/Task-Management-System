@@ -13,8 +13,9 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        // ✅ Schedule due reminders to run daily at 9 AM
-        $schedule->command('tasks:send-due-reminders')->dailyAt('09:00');
+        // ✅ Schedule due reminders to run EVERY MINUTE
+        // This ensures tasks get notifications exactly when they're due
+        $schedule->command('tasks:send-due-reminders')->everyMinute();
     }
 
     /**

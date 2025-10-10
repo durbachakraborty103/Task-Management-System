@@ -26,6 +26,7 @@ class Task extends Model
         'due_date',     // Task due date
         'completed',    // Whether task is completed (true/false)
         'user_id',      // The user who owns/assigned this task
+        'reminder_sent', // ADDED: Prevents duplicate due notifications
     ];
 
     // 2. $casts - Define attribute type casting
@@ -33,6 +34,7 @@ class Task extends Model
     protected $casts = [
         'due_date' => 'datetime', // Convert due_date to Carbon instance for date operations
         'completed' => 'boolean', // Convert completed to boolean (true/false)
+        'reminder_sent' => 'boolean', // ADDED: Cast to boolean
     ];
 
     // 3. Relationship: Each task BELONGS TO one user
@@ -132,6 +134,18 @@ class Task extends Model
                     ->where('due_date', '<=', now()->addDay()); // Due within 24 hours
     }
 
+    /**
+     * Scope to get tasks that are due NOW (for due notifications)
+     * Filters: not completed, due date passed, not already reminded
+     * Usage: Task::dueNow()->get() - for sending due notifications
+     */
+    public function scopeDueNow($query)
+    {
+        return $query->where('completed', false)           // Only pending tasks
+                    ->where('due_date', '<=', now())       // Due date has passed
+                    ->where('reminder_sent', false);       // Not already reminded
+    }
+
     // 7. Additional Helper Methods (Optional but useful)
 
     /**
@@ -164,5 +178,29 @@ class Task extends Model
     public function scopeAssignedTo($query, $userId)
     {
         return $query->where('user_id', $userId);
+    }
+
+    /**
+     * Check if task reminder has been sent
+     */
+    public function isReminderSent()
+    {
+        return $this->reminder_sent === true;
+    }
+
+    /**
+     * Mark task as reminded
+     */
+    public function markAsReminded()
+    {
+        $this->update(['reminder_sent' => true]);
+    }
+
+    /**
+     * Reset reminder status (useful for testing)
+     */
+    public function resetReminder()
+    {
+        $this->update(['reminder_sent' => false]);
     }
 }
