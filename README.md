@@ -69,3 +69,8 @@ WEDNESDAY(17.09.25):
 
 
 07.10.25(TUESDAY):Today I researched how to implement an email notification system for my website. I learned about different types of notification emails, best practices for delivery and spam protection, and compared providers like Mailgun, SendGrid, and Amazon SES. I also created a detailed plan covering setup, backend integration, monitoring, and deployment. Next, I’ll design templates and integrate the chosen email service with the website backend.
+
+08.10.25(WEDNESDAY): Daily Report: Development of mail notifications continues. A discrepancy is noted between Tinker and application logs. While Tinker commands confirm successful mail dispatch, corresponding entries are absent in the application's log files. This suggests a potential misconfiguration in the logging channel for the mail service or the environment context when executed via the web route. The immediate focus is to audit the logging configuration and ensure the mail facade uses the correct channel to provide a clear audit trail.
+
+
+09.10.25(THURSDAY):Today, I worked on fixing an issue in my project where the log file appeared corrupted and displayed text in Chinese. This problem affected the mail notification functionality. I analyzed the log configuration and tried resolving the encoding issue to restore proper logging and email notifications. Further debugging is in progress to ensure the log file records correctly and the mail feature functions smoothly.
